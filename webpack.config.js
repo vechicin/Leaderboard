@@ -5,8 +5,6 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    scoreboard: './src/scoreboard.js',
-    storage: './src/localStorage.js',
   },
   devtool: 'inline-source-map',
   devServer: {
