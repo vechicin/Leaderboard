@@ -1,21 +1,25 @@
-import _ from 'lodash';
+// IMPORTS
 import './style.css';
-import printMe from './print.js';
+import { addScoreNumber } from './scoreboard.js';
 
-function component() {
-  const element = document.createElement('div');
-  const btn = document.createElement('button');
+// ELEMENTS
+const scoreContainer = document.querySelector('ul');
+const scoreArr = [];
+const nameInput = document.querySelector('.name-input');
+const scoreInput = document.querySelector('.score-input');
+const submitButton = document.querySelector('#submit-button');
+const refreshButton = document.querySelector('.refresh-button');
 
-  // Lodash, now imported by this script  
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+// FUNCTIONS
+function scoreObj(name) {
+  return { name : name, score : 0};
+};
 
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-
-  element.appendChild(btn);
-
-  return element;
-}
-
-document.body.appendChild(component());
+// EVENT LISTENERS
+submitButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  const scoreName = nameInput.value;
+  const object = scoreObj(scoreName);
+  addScoreNumber(scoreInput, object);
+  scoreContainer.insertAdjacentHTML('beforeend', `<li>${object.name}: ${object.score}</li>`)
+})
