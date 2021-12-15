@@ -8,7 +8,6 @@ const submissionForm = document.querySelector('form');
 const refreshButton = document.querySelector('.refresh-button');
 let gameIndex = '';
 
-
 // FUNCTIONS
 const renderScores = async () => {
   const data = await APIsetup.getScores(gameIndex);
@@ -17,7 +16,7 @@ const renderScores = async () => {
   }
   scoreContainer.style.display = '';
   scoreContainer.innerHTML = data.result.map((obj) => `<li>${obj.user}: ${obj.score}</li>`).join('');
-}
+};
 
 const getLocalStorage = localStorage.getItem('Game Index');
 if (!getLocalStorage) {
@@ -29,7 +28,6 @@ if (!getLocalStorage) {
   renderScores();
 }
 
-
 // EVENT LISTENERS
 submissionForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -37,7 +35,7 @@ submissionForm.addEventListener('submit', (e) => {
   APIsetup.addScore(gameIndex, submissionForm.name.value, submissionForm.score.value);
   submissionForm.name.value = '';
   submissionForm.score.value = null;
-  renderScores()
+  renderScores();
 });
 
 refreshButton.addEventListener('click', renderScores);
