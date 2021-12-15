@@ -11,7 +11,7 @@
 
 ## Authors
 
-👤 **Santiago Velosa**
+👤 **Santiago Velosa Arias**
 
 - GitHub: [@vechicin](https://github.com/vechicin)
 - Twitter: [@therealvelosa](https://twitter.com/therealvelosa)
