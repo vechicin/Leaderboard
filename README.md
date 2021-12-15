@@ -25,7 +25,7 @@ To get a local copy up and running follow these simple example steps.
 
 2- In the drop down menu choose "Download Zip" or clone it using git using the following command.
 ~~~bash
-$ git clone git@github.com:vechicin/To-Do-List.git
+$ git@github.com:vechicin/Leaderboard.git
 ~~~
 
 3- After extracting the files, you'll have my project on your local machine.
