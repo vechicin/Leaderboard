@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+#column-right {
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.score-title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-template {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 20%;
+}
+
+#submit-button {
+  width: 50%;
+  margin-left: 50%;
+}
