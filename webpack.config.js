@@ -6,8 +6,8 @@ module.exports = {
   entry: {
     index: './src/index.js',
     scoreboard: './src/scoreboard.js',
-    storage: './src/localStorage.js'
-  }, 
+    storage: './src/localStorage.js',
+  },
   devtool: 'inline-source-map',
   devServer: {
     static: './dist',
@@ -16,9 +16,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-  ], 
+  ],
   output: {
-    filename: '[name].bundle.js',    
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },

@@ -13,8 +13,8 @@ const refreshButton = document.querySelector('.refresh-button');
 
 // FUNCTIONS
 function scoreObj(name) {
-  return { name : name, score : 0};
-};
+  return { name, score: 0 };
+}
 
 renderLocalStorage(scoreContainer, scoreArr);
 
@@ -22,7 +22,7 @@ renderLocalStorage(scoreContainer, scoreArr);
 submitButton.addEventListener('click', (e) => {
   e.preventDefault();
   const scoreName = nameInput.value;
-  if(scoreName === '') return
+  if (scoreName === '') return;
   const object = scoreObj(scoreName);
   scoreArr.push(object);
   addScoreNumber(scoreInput, object);
@@ -32,7 +32,7 @@ submitButton.addEventListener('click', (e) => {
   scoreInput.value = null;
 });
 
-refreshButton.addEventListener('click', (e) => {
+refreshButton.addEventListener('click', () => {
   scoreContainer.innerHTML = '';
   clearLocalStorage();
-}); 
+});
