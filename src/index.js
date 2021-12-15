@@ -1,6 +1,6 @@
 // IMPORTS
 import './style.css';
-import { addScoreNumber } from './scoreboard.js';
+import addScoreNumber from './scoreboard.js';
 import { saveLocalStorage, renderLocalStorage, clearLocalStorage } from './localStorage.js';
 
 // ELEMENTS
@@ -12,9 +12,7 @@ const submitButton = document.querySelector('#submit-button');
 const refreshButton = document.querySelector('.refresh-button');
 
 // FUNCTIONS
-function scoreObj(name) {
-  return { name, score: 0 };
-}
+const scoreObj = (name) => ({ name, score: 0 });
 
 renderLocalStorage(scoreContainer, scoreArr);
 
