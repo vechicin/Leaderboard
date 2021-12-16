@@ -6,6 +6,9 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: 'Bebas Neue', cursive;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .column {
@@ -18,17 +21,15 @@ body {
   align-items: center;
 }
 
-.title-container {
-  display: flex;
-  height: 200px;
-}
-
-img {
-  height: 80%;
-}
-
 h1 {
   font-size: 60px;
+  margin-left: 5%;
+  background-image: linear-gradient(90deg, rgba(191,64,191,1) 12%, rgba(0,212,255,1) 34%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 h2 {
