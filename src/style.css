@@ -18,6 +18,15 @@ body {
   align-items: center;
 }
 
+.title-container {
+  display: flex;
+  height: 200px;
+}
+
+img {
+  height: 80%;
+}
+
 h1 {
   font-size: 60px;
 }

@@ -3,7 +3,7 @@
 
 > This is a project created during my Microverse career where I built a website that creates a Leaderboard for game scores added by the user
 
-![screenshot](./screenshot.png)
+![screenshot](./images/screenshot.png)
 
 ## Built With
 
