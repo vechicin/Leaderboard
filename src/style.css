@@ -3,8 +3,14 @@ body {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  font-family: 'Bebas Neue', cursive;
+  background-image: url(../images/background.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  overflow-y: scroll;
+  background-position: 51% 98%;
 }
 
 .column {
@@ -19,10 +25,39 @@ body {
 
 h1 {
   font-size: 60px;
+  margin-left: 5%;
+  background-image: linear-gradient(90deg, rgba(191, 64, 191, 1) 15%, rgba(0, 212, 255, 1) 35%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
   font-size: 35px;
+  background-image: radial-gradient(circle, rgba(0, 212, 255, 1) 15%, rgba(191, 64, 191, 1) 71%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#add-score {
+  font-size: 35px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 5%, rgba(255, 231, 26, 1) 25%, rgba(255, 231, 26, 1) 75%, rgba(0, 0, 0, 1) 95%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  border: 6px solid #c163fd;
+  align-items: center;
+  padding: 3%;
+  font-size: 25px;
+  list-style-type: none;
+  color: #14b8d9;
 }
 
 .score-title {
@@ -38,9 +73,43 @@ h2 {
 
 input {
   margin-bottom: 20%;
+  background: none;
+  border: 2px solid #ffe81f;
+  height: 20px;
+  width: 100%;
+  color: #fff;
+}
+
+input:focus {
+  border: 2px solid #ffe81f;
+  outline: none;
+}
+
+input::placeholder {
+  color: #fff;
+  padding: 2%;
+}
+
+button {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 18px;
+  border: none;
+}
+
+#refresh-button {
+  width: 20%;
+  height: 30%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 1) 15%, rgba(191, 64, 191, 1) 71%);
 }
 
 #submit-button {
   width: 50%;
+  background-color: #ffe81f;
+  color: #000;
+  padding-top: 2%;
   margin-left: 50%;
+}
+
+button:hover {
+  cursor: pointer;
 }

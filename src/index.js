@@ -5,7 +5,7 @@ import APIsetup from './APIsetup.js';
 // ELEMENTS
 const scoreContainer = document.querySelector('ul');
 const submissionForm = document.querySelector('form');
-const refreshButton = document.querySelector('.refresh-button');
+const refreshButton = document.querySelector('#refresh-button');
 let gameIndex = '';
 
 // FUNCTIONS

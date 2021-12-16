@@ -1,9 +1,9 @@
 # Leaderboard
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> This is a project created during my Microverse career where I needed to build a website that creates a Leaderboard for scores added by the user
+> This is a project created during my Microverse career where I built a website that creates a Leaderboard for game scores added by the user
 
-![screenshot](./screenshot.png)
+![screenshot](./images/screenshot.png)
 
 ## Built With
 
@@ -11,7 +11,7 @@
 
 ## Authors
 
-👤 **Santiago Velosa Arias**
+👤 **Santiago Velosa**
 
 - GitHub: [@vechicin](https://github.com/vechicin)
 - Twitter: [@therealvelosa](https://twitter.com/therealvelosa)
@@ -30,9 +30,12 @@ $ git@github.com:vechicin/Leaderboard.git
 
 3- After extracting the files, you'll have my project on your local machine.
 
-4- to run the project you'll need to use the following command in your terminal to set up the node modules.
+4- to run the project you'll need to use the following commands in your terminal to set up the node modules.
 ~~~bash
 $ npm i
+~~~
+~~~bash
+$ npm start
 ~~~
 
 ## 🤝 Contributing
