@@ -26,32 +26,26 @@ body {
 h1 {
   font-size: 60px;
   margin-left: 5%;
-  background-image: linear-gradient(90deg, rgba(191,64,191,1) 15%, rgba(0,212,255,1) 35%);
+  background-image: linear-gradient(90deg, rgba(191, 64, 191, 1) 15%, rgba(0, 212, 255, 1) 35%);
   background-size: 100%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
   font-size: 35px;
-  background-image: radial-gradient(circle, rgba(0,212,255,1) 15%, rgba(191,64,191,1) 71%);
+  background-image: radial-gradient(circle, rgba(0, 212, 255, 1) 15%, rgba(191, 64, 191, 1) 71%);
   background-size: 100%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 #add-score {
   font-size: 35px;
-  background-image: linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(255,231,26,1) 25%, rgba(255,231,26,1) 75%, rgba(0,0,0,1) 95%);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 5%, rgba(255, 231, 26, 1) 25%, rgba(255, 231, 26, 1) 75%, rgba(0, 0, 0, 1) 95%);
   background-size: 100%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .scoreboard {
@@ -105,7 +99,7 @@ button {
 #refresh-button {
   width: 20%;
   height: 30%;
-  background: radial-gradient(circle, rgba(0,212,255,1) 15%, rgba(191,64,191,1) 71%);
+  background: radial-gradient(circle, rgba(0, 212, 255, 1) 15%, rgba(191, 64, 191, 1) 71%);
 }
 
 #submit-button {
