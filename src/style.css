@@ -7,8 +7,10 @@ body {
   width: 100vw;
   font-family: 'Bebas Neue', cursive;
   background-image: url(../images/background.jpg);
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
+  overflow-y: scroll;
+  background-position: 51% 98%;
 }
 
 .column {
@@ -24,7 +26,7 @@ body {
 h1 {
   font-size: 60px;
   margin-left: 5%;
-  background-image: linear-gradient(90deg, rgba(191,64,191,1) 20%, rgba(0,212,255,1) 65%);
+  background-image: linear-gradient(90deg, rgba(191,64,191,1) 15%, rgba(0,212,255,1) 35%);
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
@@ -34,12 +36,24 @@ h1 {
 
 h2 {
   font-size: 35px;
-  background-image: radial-gradient(circle, rgba(0,212,255,1) 22%, rgba(191,64,191,1) 71%);
+  background-image: radial-gradient(circle, rgba(0,212,255,1) 15%, rgba(191,64,191,1) 71%);
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  border: 6px solid #c163fd;
+  align-items: center;
+  padding: 3%;
+  font-size: 25px;
+  list-style-type: none;
+  color: #14b8d9;
 }
 
 .score-title {
@@ -60,4 +74,8 @@ input {
 #submit-button {
   width: 50%;
   margin-left: 50%;
+}
+
+button:hover {
+  cursor: pointer;
 }
