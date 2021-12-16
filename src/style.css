@@ -5,6 +5,7 @@ body {
   grid-template-columns: 1fr 1fr;
   height: 100vh;
   width: 100vw;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .column {
