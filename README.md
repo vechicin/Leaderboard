@@ -30,9 +30,12 @@ $ git@github.com:vechicin/Leaderboard.git
 
 3- After extracting the files, you'll have my project on your local machine.
 
-4- to run the project you'll need to use the following command in your terminal to set up the node modules.
+4- to run the project you'll need to use the following commands in your terminal to set up the node modules.
 ~~~bash
 $ npm i
+~~~
+~~~bash
+$ npm start
 ~~~
 
 ## 🤝 Contributing
