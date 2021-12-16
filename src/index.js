@@ -1,36 +1,41 @@
 // IMPORTS
 import './style.css';
-import addScoreNumber from './scoreboard.js';
-import { saveLocalStorage, renderLocalStorage, clearLocalStorage } from './localStorage.js';
+import APIsetup from './APIsetup.js';
 
 // ELEMENTS
 const scoreContainer = document.querySelector('ul');
-const scoreArr = JSON.parse(localStorage.getItem('Scoreboard')) || [];
-const nameInput = document.querySelector('.name-input');
-const scoreInput = document.querySelector('.score-input');
-const submitButton = document.querySelector('#submit-button');
+const submissionForm = document.querySelector('form');
 const refreshButton = document.querySelector('.refresh-button');
+let gameIndex = '';
 
 // FUNCTIONS
-const scoreObj = (name) => ({ name, score: 0 });
+const renderScores = async () => {
+  const data = await APIsetup.getScores(gameIndex);
+  if (data.result.length <= 0) {
+    scoreContainer.style.display = 'none';
+  }
+  scoreContainer.style.display = '';
+  scoreContainer.innerHTML = data.result.map((obj) => `<li>${obj.user}: ${obj.score}</li>`).join('');
+};
 
-renderLocalStorage(scoreContainer, scoreArr);
+const getLocalStorage = localStorage.getItem('Game Index');
+if (!getLocalStorage) {
+  APIsetup.gameTitle().then(() => {
+    gameIndex = localStorage.getItem('Game Index');
+  });
+} else {
+  gameIndex = localStorage.getItem('Game Index');
+  renderScores();
+}
 
 // EVENT LISTENERS
-submitButton.addEventListener('click', (e) => {
+submissionForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const scoreName = nameInput.value;
-  if (scoreName === '') return;
-  const object = scoreObj(scoreName);
-  scoreArr.push(object);
-  addScoreNumber(scoreInput, object);
-  scoreContainer.insertAdjacentHTML('beforeend', `<li>${object.name}: ${object.score}</li>`);
-  saveLocalStorage(scoreArr);
-  nameInput.value = '';
-  scoreInput.value = null;
+  if (submissionForm.name.value === '' || submissionForm.score.value === null) return;
+  APIsetup.addScore(gameIndex, submissionForm.name.value, submissionForm.score.value);
+  submissionForm.name.value = '';
+  submissionForm.score.value = null;
+  renderScores();
 });
 
-refreshButton.addEventListener('click', () => {
-  scoreContainer.innerHTML = '';
-  clearLocalStorage();
-});
+refreshButton.addEventListener('click', renderScores);
