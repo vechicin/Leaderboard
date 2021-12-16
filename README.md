@@ -1,7 +1,7 @@
 # Leaderboard
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> This is a project created during my Microverse career where I needed to build a website that creates a Leaderboard for scores added by the user
+> This is a project created during my Microverse career where I built a website that creates a Leaderboard for game scores added by the user
 
 ![screenshot](./screenshot.png)
 
